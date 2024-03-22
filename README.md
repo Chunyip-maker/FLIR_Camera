@@ -36,6 +36,39 @@ By integrating the FLIR AX8 camera into the FarmBot system, our goal is to enabl
   - **[Sprint 4/](./docs/Sprint%204/)** - Sprint 4 documentation (to be added)
 - **[src/](./src/)** - Source code folder (to be populated starting from Sprint 2)
 - **[README.md](./README.md)** - This file
+## Workflow Guidelines
+
+Ensuring smooth progress and collaboration within our project requires adhering to certain workflow guidelines. Below are the key practices we follow:
+
+### Branch Naming Convention
+
+To maintain clarity and organization in our codebase, we use specific prefixes for branch names based on the type of work being done:
+
+- **Feature branches** should start with `feature/`, followed by a brief description of the feature. Example: `feature/user-authentication`.
+- **Bugfix branches** should start with `fix/`, followed by a brief description of the fix. Example: `fix/login-issue`.
+
+### Commit Message Guide
+
+Commit message should include:
+
+- A short, descriptive title (50 characters max) summarizing the change.
+- A detailed description (if necessary) explaining the reason for the change and its impact.
+
+
+### Pull Request (PR) Process
+
+To maintain the quality and consistency of our project, follow these steps for submitting and reviewing pull requests:
+
+1. **Creating a PR**: Once work on a branch is complete, create a pull request on GitHub. The PR description should clearly describe the changes and their purpose.
+2. **Code Review**: At least one other team member should review the PR for feedback or approval.
+3. **Merging PRs**: After review and approval, PRs can be merged into the main branch. Ensure that the PR passes all automated tests before merging.
+
+### Document Updates
+
+Updates to documentation files, such as this README, can be made directly in the `main` branch to streamline the process of keeping our project documentation current.
+
+
+
 
 ## Changelog
 
@@ -58,7 +91,7 @@ By integrating the FLIR AX8 camera into the FarmBot system, our goal is to enabl
 
 
 
-
+ 
 
 
 
