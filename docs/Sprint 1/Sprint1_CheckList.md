@@ -54,4 +54,4 @@ Trello: https://trello.com/invite/b/xEDANiax/ATTI01cdcc600c25459dab147fd92a17b68
 
 Github: https://github.com/COMP90082-2024-SM1/FA-Wombat?tab=readme-ov-file
 
-Confluence: https://comp90082-2024-sm1-fa-wombat.atlassian.net/wiki/spaces/2024SM1FAWombat/pages/7307295/Farmbot
+Confluence: https://comp90082-2024-sm1-fa-wombat.atlassian.net/wiki/spaces/2024SM1FAWombat/overview?homepageId=262578
