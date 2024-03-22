@@ -30,6 +30,7 @@ By integrating the FLIR AX8 camera into the FarmBot system, our goal is to enabl
       - [Acceptance Criteria PDF](./docs/Sprint%201/Requirement/Acceptance_Criteria.pdf)
     - [Technical Details PDF](./docs/Sprint%201/technical_details.pdf)
     - [Sprint Plan PDF](./docs/Sprint%201/Sprint_plan.pdf)
+    - [CheckList](./docs/Sprint%201/Sprint_plan.pdf)
   - **[Sprint 2/](./docs/Sprint%202/)** - Sprint 2 documentation (to be added)
   - **[Sprint 3/](./docs/Sprint%203/)** - Sprint 3 documentation (to be added)
   - **[Sprint 4/](./docs/Sprint%204/)** - Sprint 4 documentation (to be added)
@@ -54,6 +55,9 @@ By integrating the FLIR AX8 camera into the FarmBot system, our goal is to enabl
 - 1351298 - Junye Zhou 
 - 1343866 - Yinkai Chai 
 - 1372712 - Haitian Li 
+
+
+
 
 
 
