@@ -136,6 +136,7 @@ export enum Icon {
   developer = "developer",
   logout = "logout",
   settings_small = "settings_small",
+  thermal = "thermal",
 }
 
 export enum Bug {

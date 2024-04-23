@@ -24,6 +24,7 @@ export const getLinks = (): Panel[] => [
   Panel.Messages,
   Panel.Help,
   Panel.Settings,
+  Panel.Thermal,
 ];
 
 export const NavLinks = (props: NavLinksProps) =>

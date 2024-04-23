@@ -33,6 +33,7 @@ export enum Panel {
   Help = "Help",
   Settings = "Settings",
   Shop = "Shop",
+  Thermal = "Thermal",
 }
 
 type Tabs = keyof typeof Panel;
@@ -73,6 +74,7 @@ export const TAB_COLOR: Record<Panel, PanelColor> = {
   [Panel.Help]: PanelColor.gray,
   [Panel.Settings]: PanelColor.gray,
   [Panel.Shop]: PanelColor.gray,
+  [Panel.Thermal]: PanelColor.gray,
 };
 
 export const TAB_ICON: Record<Panel, string> = {
@@ -97,6 +99,7 @@ export const TAB_ICON: Record<Panel, string> = {
   [Panel.Help]: FilePath.icon(Icon.help),
   [Panel.Settings]: FilePath.icon(Icon.settings),
   [Panel.Shop]: FilePath.icon(Icon.shop),
+  [Panel.Thermal]: FilePath.icon(Icon.thermal),
 };
 
 export const PANEL_SLUG: Record<Panel, string> = {
@@ -121,6 +124,7 @@ export const PANEL_SLUG: Record<Panel, string> = {
   [Panel.Help]: "help",
   [Panel.Settings]: "settings",
   [Panel.Shop]: "shop",
+  [Panel.Thermal]: "thermal",
 };
 
 const ALT_PANEL_SLUG: Record<string, string[]> = {
@@ -160,6 +164,7 @@ export const PANEL_TITLE = (): Record<Panel, string> => ({
   [Panel.Help]: t("Help"),
   [Panel.Settings]: t("Settings"),
   [Panel.Shop]: t("Shop"),
+  [Panel.Thermal]: t("Thermal"),
 });
 
 export const getCurrentPanel = (): Tabs | undefined => {
@@ -266,6 +271,7 @@ export class DesignerNavTabs
         <NavTab panel={Panel.Messages} />
         <NavTab panel={Panel.Help} />
         <NavTab panel={Panel.Settings} />
+        <NavTab panel={Panel.Thermal} />
       </div>
     </div>;
   }
