@@ -519,6 +519,14 @@ export const UNBOUND_ROUTES = [
   }),
   route({
     children: true,
+    $: Path.route(Path.thermal()),
+    getModule,
+    key,
+    getChild: () => import("./thermal/thermal"),
+    childKey: "thermal"
+  }),
+  route({
+    children: true,
     $: Path.route(Path.tools("add")),
     getModule,
     key,

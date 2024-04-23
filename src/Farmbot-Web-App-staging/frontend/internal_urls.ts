@@ -72,6 +72,7 @@ export namespace Path {
 
   export const settings = (path?: string) => designer("settings") + highlight(path);
   export const photos = (path?: string) => designer("photos") + highlight(path);
+  export const thermal = (path?: string) => designer("thermal") + highlight(path);
 
   export const help = (path?: string) => designer("help") + page(path);
   export const developer = (path?: string) => designer("developer") + page(path);
