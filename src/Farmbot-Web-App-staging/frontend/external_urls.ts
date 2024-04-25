@@ -35,9 +35,11 @@ export namespace ExternalUrl {
   const OPEN_STREET_MAP = "https://www.openstreetmap.org";
   const LICENSES = "https://choosealicense.com/licenses";
   const RASPBERRY_PI = "https://www.raspberrypi.com";
+  const THERMAL_CAMERA = "http://52.62.136.16:6001/api/image/current?imgformat=JPEG";
 
   export const mitLicense = `${LICENSES}/mit`;
   export const rpiImager = `${RASPBERRY_PI}/software`;
+  export const thermal = `${THERMAL_CAMERA}`;
 
   export const openStreetMap =
     (latitude: number | undefined, longitude: number | undefined) =>
