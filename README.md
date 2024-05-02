@@ -31,10 +31,25 @@ By integrating the FLIR AX8 camera into the FarmBot system, our goal is to enabl
     - [Technical Details PDF](./docs/Sprint%201/technical_details.pdf)
     - [Sprint Plan PDF](./docs/Sprint%201/Sprint_plan.pdf)
     - [CheckList](./docs/Sprint%201/Sprint1_CheckList.pdf)
-  - **[Sprint 2/](./docs/Sprint%202/)** - Sprint 2 documentation (to be added)
+  - **[Sprint 2/](./docs/Sprint%202/)** - Sprint 2 documentation
+    - [Project Details PDF](./docs/Sprint%202/project_detail.pdf) -updated
+    - **[Requirement/](./docs/Sprint%202/Requirement/)** - Requirements documentation -updated
+      - [User Story PDF](./docs/Sprint%202/Requirement/user_story.pdf)
+      - [Acceptance Criteria PDF](./docs/Sprint%202/Requirement/Acceptance_Criteria.pdf)
+    - [Technical Details PDF](./docs/Sprint%202/technical_details.pdf)
+    - [Cyber Security PDF](./docs/Sprint%202/Cyber_Security.pdf)
+    - [Ethical Considerations PDF](./docs/Sprint%202/Ethical_Considerations.pdf)
+    - [Sprint2 Code Review PDF](./docs/Sprint%202/Sprint2_Code_Review2.pdf)
+    - [Sprint 3 Plan PDF](./docs/Sprint%202/Sprint_plan.pdf) -- updated
+    - [CheckList](./docs/Sprint%202/Sprint2_CheckList.md) -- updated
   - **[Sprint 3/](./docs/Sprint%203/)** - Sprint 3 documentation (to be added)
   - **[Sprint 4/](./docs/Sprint%204/)** - Sprint 4 documentation (to be added)
 - **[src/](./src/)** - Source code folder (to be populated starting from Sprint 2)
+- **[tests/](./tests/)** -- test cases
+  - **[IntegrationTests/](./tests/IntegrationTests/)**
+    - [Imaging Integration Testing PDF](./tests/IntegrationTests/Imaging_Integration_Testing.pdf)
+    - [Integration Testing PDF](./tests/IntegrationTests/Integration_Testing.pdf)
+- **[data sample/](./data%20sample/)** -- #input data (to be added)
 - **[README.md](./README.md)** - This file
 ## Workflow Guidelines
 
