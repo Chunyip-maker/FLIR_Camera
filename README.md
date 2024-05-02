@@ -93,6 +93,27 @@ Updates to documentation files, such as this README, can be made directly in the
   - **Creation of GitHub repository and documentation structure**: Set up the project's GitHub repository, establishing a clear documentation structure to support collaborative development and project tracking. This setup included initial guides, technical documentation, and plans for future documentation updates.
   - **Challenges encountered**: Faced challenges in ensuring compatibility between FarmBot's existing software and the FLIR AX8 camera's data output formats. Through a collaborative effort, the team identified potential middleware solutions to bridge this gap.
   - **Next steps**: For the upcoming Sprint 2, the team plans to focus on developing a prototype for the FLIR AX8 integration, conducting initial tests to validate the integration concept, and refining the project's requirement documentation based on initial feedback.
+  
+- **Sprint 2:**
+  - **Resolution of technical challenges from Sprint 1**:
+    - Successfully resolved key technical issues identified in the previous sprint, including linking the FLIR AX8 thermal imaging camera with Raspberry Pi.
+    - Powered the FLIR AX8 using the FarmBot motherboard, enabling the combined operation of the FLIR AX8, Raspberry Pi, and FarmBot motherboard in a production environment.
+  - **Deployment of the FarmBot web application**:
+    - The team successfully deployed the FarmBot web application in a local environment.
+    - Added a new tag to the web app to interface with the AX8 thermal imaging camera's API, enhancing the system's functionality.
+  - **Integration of camera and web application**:
+    - Developed and implemented a series of technical solutions for integrating the thermal imaging camera with the web app.
+    - Set up a server-client architecture using FRP for internal network penetration to project the camera's service to the public internet.
+    - Configured complex Nginx setups to handle cross-origin issues related to cookie transmission when using third-party services.
+  - **Exploration of server security**:
+    - Discussed and explored various server security measures, including defenses against indiscriminate script scanning and other potential security threats.
+  - **Challenges encountered**:
+    - The team faced challenges in ensuring compatibility between FarmBot's existing software and the FLIR AX8 camera's data output formats during the early stages of the sprint. Through a collaborative effort, potential middleware solutions were identified to bridge this gap.
+    - Moving forward, a significant challenge will be the full deployment of the FarmBot system in a server production environment, ensuring that all features of the FLIR AX8 are fully utilized while maintaining speed and quality.
+
+  - **Next steps**:
+    - The focus of the team will shift from hardware components (Raspberry Pi, FarmBot, AX8 camera) and middleware (FRP for internal network penetration) towards backend and software improvements.
+    - Future implementations will prioritize enhancing the user experience and core functionality, ensuring a seamless integration of all system components and a robust platform for end-users.
 
 
 ## Team Members
