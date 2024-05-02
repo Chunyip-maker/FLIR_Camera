@@ -47,7 +47,7 @@ By integrating the FLIR AX8 camera into the FarmBot system, our goal is to enabl
 - **[src/](./src/)** - Source code folder (to be populated starting from Sprint 2)
 - **[tests/](./tests/)** -- test cases
   - **[IntegrationTests/](./tests/IntegrationTests/)**
-    - [Imaging Integration Testing PDF](./tests/IntegrationTests/Imaging_Integration_Testing.pdf)
+    - [Overall Testing PDF](./tests/IntegrationTests/Imaging_Integration_Testing.pdf)
     - [Integration Testing PDF](./tests/IntegrationTests/Integration_Testing.pdf)
 - **[data sample/](./data%20sample/)** -- #input data (to be added)
 - **[README.md](./README.md)** - This file
