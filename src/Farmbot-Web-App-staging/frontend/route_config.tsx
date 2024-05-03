@@ -523,7 +523,7 @@ export const UNBOUND_ROUTES = [
     getModule,
     key,
     getChild: () => import("./thermal/thermal"),
-    childKey: "thermal"
+    childKey: "Thermal"
   }),
   route({
     children: true,
