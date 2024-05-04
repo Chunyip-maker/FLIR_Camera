@@ -10,7 +10,7 @@ export function Thermal() {
   const [imageSrc, setImageSrc] = useState('');
   const refreshInterval = 3000;
   const [imageUrl, setImageUrl] = useState('');
-  const imageUrlBase = 'http://13.56.61.23:6001/api/image/current?imgformat=JPEG';
+  const imageUrlBase = 'http://203.101.230.232:6001/api/image/current?imgformat=JPEG';
   const [isFetching, setIsFetching] = useState(false); 
 
   const openModal = (imgSrc: string) => {
@@ -88,6 +88,9 @@ export function Thermal() {
             <img className="modal-content" src={imageSrc} alt="Expanded view" />
           </div>
         )}
+        <div>
+          <iframe src="http://203.101.230.232:6001/" title="Embedded Page" id="iframe"/>
+        </div>
       </DesignerPanelContent>
     </DesignerPanel>
     
