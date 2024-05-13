@@ -112,6 +112,8 @@ FarmBot::Application.routes.draw do
     put "/password_resets" => "password_resets#update", as: :whatever
     get "/storage_auth" => "images#storage_auth", as: :storage_auth
     post "/export_data" => "devices#dump", as: :dump_device
+
+    get "/proxy_to_external_server" => "proxy#proxy_to_external_server"
   end
 
   devise_for :users

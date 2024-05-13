@@ -83,6 +83,8 @@ module FarmBot
         ENV["FORCE_SSL"] ? "wss:" : "ws:",
         "localhost:#{API_PORT}",
         "localhost:3808",
+        "localhost:3300",
+        "localhost:3000",
         "browser-http-intake.logs.datadoghq.com",
         "#{ENV.fetch("API_HOST")}:#{API_PORT}",
         "#{ENV.fetch("API_HOST")}:3808",

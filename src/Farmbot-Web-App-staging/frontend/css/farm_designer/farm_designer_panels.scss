@@ -2,7 +2,7 @@
 .farm-designer-panels {
   position: fixed;
   top: 8.9rem;
-  width: 45rem;
+  width: 50rem;
   box-shadow: 0 0 10px $translucent;
   @media screen and (max-width: 450px) {
     width: 100%;
@@ -121,6 +121,9 @@
 .farm-designer-panels {
   bottom: 0;
   z-index: 1;
+  overflow-y: scroll;
+  background-color: #f9fbfc;
+
   &.panel-closed {
     display: none !important;
   }
@@ -150,7 +153,7 @@
 
 .panel-container {
   overflow: hidden;
-  div[class*="search-item"] {
+  div[class*='search-item'] {
     &:hover,
     &.hovered {
       transition: background 0.2s ease;
@@ -158,7 +161,7 @@
   }
   &.green-panel {
     background-color: $panel_light_green;
-    div[class*="search-item"] {
+    div[class*='search-item'] {
       &:hover,
       &.hovered {
         background: darken($panel_light_green, 10%);
@@ -167,7 +170,7 @@
   }
   &.cyan-panel {
     background-color: $light_cyan;
-    div[class*="search-item"] {
+    div[class*='search-item'] {
       &:hover,
       &.hovered {
         background: darken($light_cyan, 10%);
@@ -176,7 +179,7 @@
   }
   &.brown-panel {
     background-color: $panel_light_brown;
-    div[class*="search-item"] {
+    div[class*='search-item'] {
       &:hover,
       &.hovered {
         background: darken($panel_light_brown, 10%);
@@ -185,7 +188,7 @@
   }
   &.magenta-panel {
     background-color: $light_magenta;
-    div[class*="search-item"] {
+    div[class*='search-item'] {
       &:hover,
       &.hovered {
         background: darken($light_magenta, 10%);
@@ -195,7 +198,7 @@
   &.light-gray-panel,
   &.gray-panel {
     background-color: $panel_light_gray;
-    div[class*="search-item"] {
+    div[class*='search-item'] {
       &:hover,
       &.hovered {
         background: darken($panel_light_gray, 10%);
@@ -204,7 +207,7 @@
   }
   &.yellow-panel {
     background-color: $panel_light_yellow;
-    div[class*="search-item"] {
+    div[class*='search-item'] {
       &:hover,
       &.hovered {
         background: darken($panel_light_yellow, 10%);
@@ -213,7 +216,7 @@
   }
   &.blue-panel {
     background-color: $panel_light_blue;
-    div[class*="search-item"] {
+    div[class*='search-item'] {
       &:hover,
       &.hovered {
         background: darken($panel_light_blue, 10%);
@@ -222,7 +225,7 @@
   }
   &.navy-panel {
     background-color: $panel_light_navy;
-    div[class*="search-item"] {
+    div[class*='search-item'] {
       &:hover,
       &.hovered {
         background: darken($panel_light_navy, 10%);
@@ -231,7 +234,7 @@
   }
   &.teal-panel {
     background-color: $panel_light_teal;
-    div[class*="search-item"] {
+    div[class*='search-item'] {
       &:hover,
       &.hovered {
         background: darken($panel_light_teal, 10%);
@@ -240,7 +243,7 @@
   }
   &.red-panel {
     background-color: $panel_light_red;
-    div[class*="search-item"] {
+    div[class*='search-item'] {
       &:hover,
       &.hovered {
         background: darken($panel_light_red, 10%);
@@ -267,7 +270,7 @@
   &.gray-panel {
     background-color: $panel_gray;
   }
-  &.light-gray-panel{
+  &.light-gray-panel {
     background-color: $panel_medium_light_gray;
   }
   &.yellow-panel {
@@ -311,7 +314,8 @@
   &::-webkit-scrollbar {
     display: none;
   }
-  img, .fa {
+  img,
+  .fa {
     filter: brightness(0%) invert(100%);
     opacity: 0.8;
   }
@@ -357,7 +361,7 @@
   height: 50px;
   overflow: hidden;
   .back-arrow {
-    &.black-text{
+    &.black-text {
       color: $medium_gray;
     }
     float: left;
@@ -366,10 +370,10 @@
     width: 50px;
     line-height: 50px;
     &:hover {
-      &.black-text{
+      &.black-text {
         color: $darker_gray !important;
       }
-      &.white-text{
+      &.white-text {
         color: $white;
       }
     }
@@ -406,10 +410,10 @@
   }
 }
 
-.white-text{
+.white-text {
   color: $off_white;
 }
-.black-text{
+.black-text {
   color: $black;
 }
 
@@ -463,7 +467,7 @@
     label {
       min-width: -webkit-fill-available;
       margin-bottom: 0px;
-      margin-left: .5rem;
+      margin-left: 0.5rem;
       margin-top: 0;
     }
     .button-row {
@@ -657,7 +661,7 @@
       }
     }
     .point-color-input {
-      div[class*=col-] {
+      div[class*='col-'] {
         padding-left: 0.5rem;
       }
       .saucer {
@@ -705,7 +709,7 @@
 .weed-info-panel-content,
 .point-info-panel-content {
   .point-color-input {
-    div[class*=col-] {
+    div[class*='col-'] {
       padding-left: 0.5rem;
     }
     .saucer {
@@ -822,7 +826,7 @@
 
 .farm-event-form {
   .farm-event-repeat-options {
-    input[type=checkbox] {
+    input[type='checkbox'] {
       margin-right: 0.5rem;
       margin-top: 0;
       vertical-align: middle;
@@ -866,7 +870,7 @@
   right: 0;
   width: 2rem;
   height: 100%;
-  background: linear-gradient(-90deg, $translucent, transparent)
+  background: linear-gradient(-90deg, $translucent, transparent);
 }
 
 .panel-header {
@@ -880,7 +884,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     width: 75%;
-    font-family: "Cabin", sans-serif;
+    font-family: 'Cabin', sans-serif;
   }
   .saving-indicator {
     position: absolute;
@@ -944,7 +948,7 @@
     .panel-title {
       overflow: visible;
       .title {
-        font-family: "Inknut Antiqua";
+        font-family: 'Inknut Antiqua';
         font-weight: bold;
       }
       .bp5-popover-wrapper {
@@ -1214,7 +1218,7 @@ li {
   .row {
     margin-left: 0;
     margin-right: 0;
-    div[class*=col-] {
+    div[class*='col-'] {
       padding-left: 0;
       padding-right: 1rem;
     }
@@ -1237,7 +1241,7 @@ li {
     }
   }
   .grid-input {
-    i[class*=fa-arrow] {
+    i[class*='fa-arrow'] {
       margin-right: 0.35rem;
       cursor: default !important;
     }
@@ -1277,7 +1281,9 @@ li {
     color: $off_white;
     margin-top: 1.25rem;
     margin-right: 1.5rem;
-    &:hover { color: $white; }
+    &:hover {
+      color: $white;
+    }
   }
 }
 
@@ -1437,7 +1443,7 @@ li {
       margin-top: 2rem;
     }
     .point-search-item,
-    .plant-search-item{
+    .plant-search-item {
       margin-left: -15px;
       margin-right: -15px;
       padding-left: 2rem;
@@ -1452,7 +1458,6 @@ li {
           padding-left: 2rem;
         }
       }
-
     }
     .interpolated-soil-height {
       .title {
@@ -1705,7 +1710,8 @@ li {
   label {
     margin-top: 0 !important;
   }
-  .row, fieldset {
+  .row,
+  fieldset {
     margin-top: 2rem;
   }
   fieldset button {
@@ -1742,7 +1748,7 @@ li {
     label {
       margin-top: 0;
     }
-    input[type="checkbox"] {
+    input[type='checkbox'] {
       float: left;
       margin-right: 1rem;
     }
@@ -1913,7 +1919,7 @@ li {
       margin-right: 0;
       margin-top: 1rem;
     }
-    div[class*=col-] {
+    div[class*='col-'] {
       padding: 0;
       padding-right: 1rem;
     }
@@ -2100,7 +2106,7 @@ li {
       margin-top: 0.2rem;
     }
     .group-member-display {
-      i[class*=fa-caret-] {
+      i[class*='fa-caret-'] {
         float: right;
         font-size: 2rem;
       }
@@ -2163,7 +2169,7 @@ li {
           display: inline;
           text-transform: uppercase;
         }
-        input[type="text"] {
+        input[type='text'] {
           width: 50%;
           height: 2rem;
         }
@@ -2179,7 +2185,7 @@ li {
               display: inline-block;
               height: 2rem;
             }
-            i[class*=fa-caret-] {
+            i[class*='fa-caret-'] {
               position: absolute;
               right: -0.5rem;
               width: 3rem;
@@ -2204,7 +2210,7 @@ li {
         }
       }
       .criteria-radio-presets {
-        input[type="radio"] {
+        input[type='radio'] {
           width: auto;
           margin-right: 1rem;
         }
@@ -2272,7 +2278,7 @@ li {
           .row {
             margin-left: 0;
           }
-          div[class*=col-] {
+          div[class*='col-'] {
             padding: 0;
             padding-right: 0.75rem;
           }
@@ -2293,7 +2299,7 @@ li {
         .row {
           margin-left: 0;
         }
-        div[class*=col-] {
+        div[class*='col-'] {
           padding: 0;
         }
         .col-xs-9 {
@@ -2343,7 +2349,7 @@ li {
   .row {
     margin-left: 0;
     margin-right: -2.5rem;
-    div[class*=col-] {
+    div[class*='col-'] {
       padding: 0;
       text-align: center;
     }
@@ -2586,7 +2592,7 @@ li {
       position: absolute;
       right: 0;
       width: 50%;
-      color: $off_white
+      color: $off_white;
     }
     label {
       width: 100%;
@@ -2811,7 +2817,7 @@ li {
 
 .curve-usage-display {
   margin-bottom: 2rem;
-  i[class*=fa-caret-] {
+  i[class*='fa-caret-'] {
     float: right;
     font-size: 2rem;
   }
@@ -2979,7 +2985,7 @@ li {
         }
         &.single-image-mode,
         &.image-layer-disabled {
-          opacity: 0.40;
+          opacity: 0.4;
           * {
             pointer-events: none;
           }
@@ -2992,7 +2998,7 @@ li {
             width: 105%;
             padding: 0.5rem;
             background-color: $dark_gray;
-            opacity: 0.90;
+            opacity: 0.9;
             color: $off_white;
             font-size: 1.8rem;
             vertical-align: middle;

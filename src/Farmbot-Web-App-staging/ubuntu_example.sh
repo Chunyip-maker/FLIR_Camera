@@ -50,7 +50,7 @@ nano .env          # ⚠ SKIP THIS STEP IF UPGRADING!
 
 # Install the correct version of bundler for the project
 sudo docker compose run web gem install bundler
-# Install application specific Ruby dependencies
+# Install application specific Ruby dependencies ==
 sudo docker compose run web bundle install
 # Install application specific Javascript deps
 sudo docker compose run web npm install
