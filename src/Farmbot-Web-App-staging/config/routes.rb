@@ -114,6 +114,7 @@ FarmBot::Application.routes.draw do
     post "/export_data" => "devices#dump", as: :dump_device
 
     get "/proxy_to_external_server" => "proxy#proxy_to_external_server"
+    post "/upload_img_to_external_server" => "proxy#upload_img_to_external_server"
   end
 
   devise_for :users

@@ -281,4 +281,7 @@ export class API {
   get getImage() {
     return `${this.baseUrl}/api/proxy_to_external_server`
   }
+  get getImageRGBMatrix() {
+    return `${this.baseUrl}/api/upload_img_to_external_server`
+  }
 }
