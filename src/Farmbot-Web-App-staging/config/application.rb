@@ -85,6 +85,7 @@ module FarmBot
         "localhost:3808",
         "localhost:3300",
         "localhost:3000",
+        "http://203.101.230.232:5000",
         "browser-http-intake.logs.datadoghq.com",
         "#{ENV.fetch("API_HOST")}:#{API_PORT}",
         "#{ENV.fetch("API_HOST")}:3808",

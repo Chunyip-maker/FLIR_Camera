@@ -1,14 +1,14 @@
 .request-button {
   position: absolute;
-  bottom: 2rem;
-  right: 26rem;
+  top: 72rem;
+  right: 19rem;
   background-color: rgb(152, 251, 152);
   border-radius: 5px;
 }
 .request-button.stop {
   position: absolute;
-  bottom: 2rem;
-  right: 26rem;
+  top: 72rem;
+  right: 19rem;
   background-color: rgb(255, 182, 193);
   border-radius: 5px;
   width: 90px;
@@ -26,12 +26,12 @@
 
 /* thermal.css */
 .image-container img {
-  width: 300px; /* Fixed width */
-  height: 200px; /* Fixed height */
+  width: 380px; /* Fixed width */
+  height: 240px; /* Fixed height */
   cursor: pointer;
   position: absolute;
-  top: 40rem;
-  left: 8rem;
+  top: 45rem;
+  left: 6rem;
 }
 #tab_1 {
   cursor: pointer;
@@ -75,4 +75,29 @@
   height: 330px;
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+.data-table {
+  position: absolute;
+  top: 50em;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.data-table th {
+  background-color: #f2f2f2;
+}
+
+#clear_button{
+  position: absolute;
+  top: 76rem;
+  right: 0rem;
+  background-color: rgb(255, 182, 193);
 }
