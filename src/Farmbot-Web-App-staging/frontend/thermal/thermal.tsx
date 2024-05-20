@@ -24,7 +24,6 @@ export function Thermal() {
   const { location_data } = bot.hardware;
   const position = validBotLocationData(location_data).position;
 
-  console.log(`Coordinates: X=${position.x}, Y=${position.y}, Z=${position.z}`);
 
   const [imageSrc, setImageSrc] = useState<string>('');
   const [tableData, setTableData] = useState<ImageData[]>([]);
