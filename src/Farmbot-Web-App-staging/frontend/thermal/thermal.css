@@ -1,10 +1,16 @@
 .request-button {
   position: absolute;
   top: 72rem;
-  right: 19rem;
+  right: 20rem;
   background-color: rgb(152, 251, 152);
   border-radius: 5px;
 }
+.request-button.disabled {
+  background-color: grey;
+  color: white;
+  cursor: not-allowed;
+}
+
 .request-button.stop {
   position: absolute;
   top: 72rem;
@@ -98,6 +104,19 @@
 #clear_button{
   position: absolute;
   top: 76rem;
-  right: 0rem;
+  right: 1rem;
   background-color: rgb(255, 182, 193);
+}
+
+.download-format-button {
+  width: 140px;
+  height: 35px;
+  font-size: 12px; 
+  margin: 3px;
+}
+
+.download-format-button.disabled {
+  background-color: grey;
+  color: white;
+  cursor: not-allowed;
 }
