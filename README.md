@@ -55,10 +55,11 @@ By integrating the FLIR AX8 camera into the FarmBot system, our goal is to enabl
     - [CheckList](./docs/Sprint%203/Sprint3_CheckList.md) -- updated
   - **[Sprint 4/](./docs/Sprint%204/)** - Sprint 4 documentation (to be added)
 - **[src/](./src/)** - Source code folder (to be populated starting from Sprint 2)
-- **[tests/](./tests/)** -- test cases
+- **[tests/](./tests/)** -- test cases -- updated
   - **[IntegrationTests/](./tests/IntegrationTests/)**
-    - [Overall Testing PDF](./tests/IntegrationTests/Imaging_Integration_Testing.pdf)
+    - [Overall Testing PDF](./tests/IntegrationTests/Overall_Testing.pdf)
     - [Integration Testing PDF](./tests/IntegrationTests/Integration_Testing.pdf)
+    - [Acceptance Testing PDF](./tests/IntegrationTests/Acceptance_Tests.pdf)
 - **[data sample/](./data%20sample/)** -- #input data (to be added)
 - **[README.md](./README.md)** - This file
 ## Workflow Guidelines
