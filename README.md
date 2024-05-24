@@ -39,10 +39,20 @@ By integrating the FLIR AX8 camera into the FarmBot system, our goal is to enabl
     - [Technical Details PDF](./docs/Sprint%202/technical_details.pdf)
     - [Cyber Security PDF](./docs/Sprint%202/Cyber_Security.pdf)
     - [Ethical Considerations PDF](./docs/Sprint%202/Ethical_Considerations.pdf)
-    - [Sprint2 Code Review PDF](./docs/Sprint%202/Sprint2_Code_Review2.pdf)
+    - [Sprint 2 Code Review PDF](./docs/Sprint%202/Sprint2_Code_Review2.pdf)
     - [Sprint 3 Plan PDF](./docs/Sprint%202/Sprint_plan.pdf) -- updated
     - [CheckList](./docs/Sprint%202/Sprint2_CheckList.md) -- updated
-  - **[Sprint 3/](./docs/Sprint%203/)** - Sprint 3 documentation (to be added)
+  - **[Sprint 3/](./docs/Sprint%203/)** - Sprint 3 documentation
+    - [Project Details PDF](./docs/Sprint%203/project_detail.pdf) -updated
+    - **[Requirement/](./docs/Sprint%203/Requirement/)** - Requirements documentation -updated
+      - [User Story PDF](./docs/Sprint%203/Requirement/user_story.pdf)
+      - [Acceptance Criteria PDF](./docs/Sprint%203/Requirement/Acceptance_Criteria.pdf)
+    - [Technical Details PDF](./docs/Sprint%203/technical_details.pdf)
+    - [Cyber Security PDF](./docs/Sprint%203/Cyber_Security.pdf) -updated
+    - [Ethical Considerations PDF](./docs/Sprint%203/Ethical_Considerations.pdf) -updated
+    - [Sprint 3 Code Review PDF](./docs/Sprint%203/Sprint3_Code_Review2.pdf)
+    - [Sprint 4 Plan PDF](./docs/Sprint%203/Sprint_plan.pdf) -- updated
+    - [CheckList](./docs/Sprint%203/Sprint3_CheckList.md) -- updated
   - **[Sprint 4/](./docs/Sprint%204/)** - Sprint 4 documentation (to be added)
 - **[src/](./src/)** - Source code folder (to be populated starting from Sprint 2)
 - **[tests/](./tests/)** -- test cases
@@ -114,6 +124,31 @@ Updates to documentation files, such as this README, can be made directly in the
   - **Next steps**:
     - The focus of the team will shift from hardware components (Raspberry Pi, FarmBot, AX8 camera) and middleware (FRP for internal network penetration) towards backend and software improvements.
     - Future implementations will prioritize enhancing the user experience and core functionality, ensuring a seamless integration of all system components and a robust platform for end-users.
+- **Sprint 3:**
+  - **Migration to School Servers**:
+    - Successfully migrated the FarmBot web application and services from AWS to school-provided servers, enhancing security and performance.
+    - Implemented FRP (Fast Reverse Proxy) to replace Ngrok and Nginx for exposing hardware functionalities securely to the public network.
+  - **Full Deployment and Testing**:
+    - Deployed the complete system, including the FarmBot web application, FLIR AX8 camera, and Raspberry Pi, on the new server infrastructure.
+    - Conducted extensive testing to ensure stable and secure operation in the new environment.
+  - **3D-Printed Camera Mount**:
+    - Created a new 3D-printed mount for the FLIR AX8 camera on the FarmBot, improving adaptability and adjustability.
+  - **Software Development**:
+    - Completed the comprehensive development of the web application, fully integrating the FLIR AX8 camera functionalities and developing customized data display features through APIs, including image download and matrix-formatted downloads.
+  - **Middleware and Integration**:
+    - Optimized middleware solutions to ensure seamless data transmission and integration between hardware components and the web application.
+  - **Security Enhancements**:
+    - Continued utilizing Cloudflare for domain management, leveraging its automated DDoS protection and Web Application Firewall (WAF) to enhance server security.
+    - Developed and implemented additional firewall rules and security protocols to protect against potential threats.
+  - **Challenges Encountered**:
+    - Encountered issues integrating functionalities into the Rust and Ruby-based FarmBot code base. Resolved by implementing local Python microservices, enhancing maintainability and scalability.
+    - Addressed cross-domain security issues and ensured secure data transmission using FRP.
+
+  - **Next steps**:
+    - **Integration Technique Improvements**:
+      - Plan to improve the integration methods for the FLIR AX8 camera with the FarmBot web application by simplifying communication protocols and enhancing data handling, preparing for future machine learning functionalities.
+    - **Enhanced Security Measures**:
+      - Develop and implement enhanced security protocols to ensure the integrity and confidentiality of data transmitted between devices and the web application, further improving the system’s scalability and maintainability to address future challenges.
 
 
 ## Team Members
