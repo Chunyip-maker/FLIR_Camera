@@ -128,122 +128,120 @@ export class GardenMap extends
     });
   }, 400);
 
-  getGardenCoordinates =
-    (e: React.DragEvent<HTMLElement> | React.MouseEvent<SVGElement>):
-      AxisNumberProperty | undefined => {
-      return getGardenCoordinates({
-        mapTransformProps: this.mapTransformProps,
-        gridOffset: this.props.gridOffset,
-        pageX: e.pageX,
-        pageY: e.pageY,
-      });
-    };
+getGardenCoordinates = (e: React.DragEvent<HTMLElement> | React.MouseEvent<SVGElement>) => {
+  const pageX = (e as any).adjustedPageX || e.pageX;
+  const pageY = (e as any).adjustedPageY || e.pageY;
+
+  return getGardenCoordinates({
+    mapTransformProps: this.mapTransformProps,
+    gridOffset: this.props.gridOffset,
+    pageX,
+    pageY,
+  });
+};
+
 
   setMapState = (x: Partial<GardenMapState>) => this.setState(x);
 
-  /** Map (anywhere) drag start actions. */
-  startDrag = (e: React.MouseEvent<SVGElement>): void => {
-    switch (getMode()) {
-      case Mode.editPlant:
-        const gardenCoords = this.getGardenCoordinates(e);
-        const plant = this.getPlant();
-        if (cursorAtPlant(plant, gardenCoords)) {
-          beginPlantDrag({
-            plant,
-            setMapState: this.setMapState,
-            selectedPlant: this.props.selectedPlant,
-          });
-        } else { // Actions away from plant exit plant edit mode.
-          startNewSelectionBox({
-            gardenCoords,
-            setMapState: this.setMapState,
-            dispatch: this.props.dispatch,
-            plantActions: true,
-          });
-        }
-        break;
-      case Mode.editGroup:
+startDrag = (e: React.MouseEvent<SVGElement>): void => {
+  const adjustedEvent = this.adjustCoordinates(e);
+  switch (getMode()) {
+    case Mode.editPlant:
+      const gardenCoords = this.getGardenCoordinates(adjustedEvent);
+      const plant = this.getPlant();
+      if (cursorAtPlant(plant, gardenCoords)) {
+        beginPlantDrag({
+          plant,
+          setMapState: this.setMapState,
+          selectedPlant: this.props.selectedPlant,
+        });
+      } else {
         startNewSelectionBox({
-          gardenCoords: this.getGardenCoordinates(e),
+          gardenCoords,
           setMapState: this.setMapState,
           dispatch: this.props.dispatch,
-          plantActions: !this.props.designer.editGroupAreaInMap,
+          plantActions: true,
         });
-        break;
-      case Mode.createPoint:
-        startNewPoint({
-          gardenCoords: this.getGardenCoordinates(e),
-          dispatch: this.props.dispatch,
-          setMapState: this.setMapState,
-          type: "point",
-        });
-        break;
-      case Mode.createWeed:
-        startNewPoint({
-          gardenCoords: this.getGardenCoordinates(e),
-          dispatch: this.props.dispatch,
-          setMapState: this.setMapState,
-          type: "weed",
-        });
-        break;
-      case Mode.clickToAdd:
-        break;
-    }
-  };
+      }
+      break;
+    case Mode.editGroup:
+      startNewSelectionBox({
+        gardenCoords: this.getGardenCoordinates(adjustedEvent),
+        setMapState: this.setMapState,
+        dispatch: this.props.dispatch,
+        plantActions: !this.props.designer.editGroupAreaInMap,
+      });
+      break;
+    case Mode.createPoint:
+      startNewPoint({
+        gardenCoords: this.getGardenCoordinates(adjustedEvent),
+        dispatch: this.props.dispatch,
+        setMapState: this.setMapState,
+        type: "point",
+      });
+      break;
+    case Mode.createWeed:
+      startNewPoint({
+        gardenCoords: this.getGardenCoordinates(adjustedEvent),
+        dispatch: this.props.dispatch,
+        setMapState: this.setMapState,
+        type: "weed",
+      });
+      break;
+    case Mode.clickToAdd:
+      break;
+  }
+};
 
-  /** Map background drag start actions. */
-  startDragOnBackground = (e: React.MouseEvent<SVGElement>): void => {
-    switch (getMode()) {
-      case Mode.locationInfo:
-      case Mode.createPoint:
-      case Mode.createWeed:
-      case Mode.clickToAdd:
-      case Mode.editPlant:
-      case Mode.profile:
-        break;
-      case Mode.boxSelect:
-        startNewSelectionBox({
-          gardenCoords: this.getGardenCoordinates(e),
-          setMapState: this.setMapState,
-          dispatch: this.props.dispatch,
-          plantActions: true,
-        });
-        break;
-      case Mode.editGroup:
-        startNewSelectionBox({
-          gardenCoords: this.getGardenCoordinates(e),
-          setMapState: this.setMapState,
-          dispatch: this.props.dispatch,
-          plantActions: !this.props.designer.editGroupAreaInMap,
-        });
-        break;
-      default:
-        const openLocationInfo = (e: React.MouseEvent<SVGElement>) => {
-          const xyLocation = this.getGardenCoordinates(e);
-          const {
-            selectedPoints, hoveredPlant, hoveredPoint, hoveredToolSlot,
-          } = this.props.designer;
-          const selectionActive = (selectedPoints && selectedPoints.length > 0)
-            || (hoveredPlant.plantUUID || hoveredPoint || hoveredToolSlot);
-          if (!selectionActive && xyLocation) {
-            this.setState({
-              toLocation: { x: xyLocation.x, y: xyLocation.y, z: 0 },
-            });
-            return false;
-          } else {
-            return true;
-          }
-        };
-        openLocationInfo(e) && push(Path.plants());
-        startNewSelectionBox({
-          gardenCoords: this.getGardenCoordinates(e),
-          setMapState: this.setMapState,
-          dispatch: this.props.dispatch,
-          plantActions: true,
-        });
-        break;
-    }
-  };
+startDragOnBackground = (e: React.MouseEvent<SVGElement>): void => {
+  const adjustedEvent = this.adjustCoordinates(e);
+  switch (getMode()) {
+    case Mode.locationInfo:
+    case Mode.createPoint:
+    case Mode.createWeed:
+    case Mode.clickToAdd:
+    case Mode.editPlant:
+    case Mode.profile:
+      break;
+    case Mode.boxSelect:
+      startNewSelectionBox({
+        gardenCoords: this.getGardenCoordinates(adjustedEvent),
+        setMapState: this.setMapState,
+        dispatch: this.props.dispatch,
+        plantActions: true,
+      });
+      break;
+    case Mode.editGroup:
+      startNewSelectionBox({
+        gardenCoords: this.getGardenCoordinates(adjustedEvent),
+        setMapState: this.setMapState,
+        dispatch: this.props.dispatch,
+        plantActions: !this.props.designer.editGroupAreaInMap,
+      });
+      break;
+    default:
+      const openLocationInfo = (e: React.MouseEvent<SVGElement>) => {
+        const xyLocation = this.getGardenCoordinates(adjustedEvent);
+        const { selectedPoints, hoveredPlant, hoveredPoint, hoveredToolSlot } = this.props.designer;
+        const selectionActive = (selectedPoints && selectedPoints.length > 0)
+          || (hoveredPlant.plantUUID || hoveredPoint || hoveredToolSlot);
+        if (!selectionActive && xyLocation) {
+          this.setState({ toLocation: { x: xyLocation.x, y: xyLocation.y, z: 0 } });
+          return false;
+        } else { 
+          return true;
+        }
+      };
+      openLocationInfo(e) && push(Path.plants());
+      startNewSelectionBox({
+        gardenCoords: this.getGardenCoordinates(adjustedEvent),
+        setMapState: this.setMapState,
+        dispatch: this.props.dispatch,
+        plantActions: true,
+      });
+      break;
+  }
+};
 
   interactions = (pointerType: PointType): boolean => {
     if (allowInteraction()) {
@@ -276,6 +274,18 @@ export class GardenMap extends
       : [];
   }
 
+adjustCoordinates = (e: React.MouseEvent<SVGElement> | React.DragEvent<HTMLElement>) => {
+  const rect = e.currentTarget.getBoundingClientRect();
+  const adjustedX = e.clientX-65;
+  const adjustedY = e.clientY; 
+
+  return {
+    ...e,
+    adjustedPageX: adjustedX,
+    adjustedPageY: adjustedY
+  };
+};
+
   handleDragOver = (e: React.DragEvent<HTMLElement>) => {
     switch (getMode()) {
       case Mode.addPlant:
@@ -291,44 +301,49 @@ export class GardenMap extends
         e.preventDefault();
     }
   };
+ 
+handleDrop = (e: React.DragEvent<HTMLElement> | React.MouseEvent<SVGElement>) => {
+  e.preventDefault();
+  const adjustedEvent = this.adjustCoordinates(e);
+  dropPlant({
+    gardenCoords: this.getGardenCoordinates(adjustedEvent),
+    gridSize: this.mapTransformProps.gridSize,
+    dispatch: this.props.dispatch,
+    getConfigValue: this.props.getConfigValue,
+    plants: this.props.plants,
+    curves: this.props.curves,
+    designer: this.props.designer,
+  });
+};
 
-  handleDrop =
-    (e: React.DragEvent<HTMLElement> | React.MouseEvent<SVGElement>) => {
+
+click = (e: React.MouseEvent<SVGElement>) => {
+  const adjustedEvent = this.adjustCoordinates(e);
+
+  switch (getMode()) {
+    case Mode.clickToAdd:
+      // Create a new plant in the map
+      this.handleDrop(adjustedEvent);
+      break;
+    case Mode.locationInfo:
       e.preventDefault();
-      dropPlant({
-        gardenCoords: this.getGardenCoordinates(e),
-        gridSize: this.mapTransformProps.gridSize,
-        dispatch: this.props.dispatch,
-        getConfigValue: this.props.getConfigValue,
-        plants: this.props.plants,
-        curves: this.props.curves,
-        designer: this.props.designer,
+      !this.state.toLocation && chooseLocation({
+        gardenCoords: this.getGardenCoordinates(adjustedEvent),
+        dispatch: this.props.dispatch
       });
-    };
+      break;
+    case Mode.profile:
+      // Choose profile location
+      e.preventDefault();
+      chooseProfile({
+        gardenCoords: this.getGardenCoordinates(adjustedEvent),
+        dispatch: this.props.dispatch
+      });
+      break;
+  }
+};
 
-  click = (e: React.MouseEvent<SVGElement>) => {
-    switch (getMode()) {
-      case Mode.clickToAdd:
-        // Create a new plant in the map
-        this.handleDrop(e);
-        break;
-      case Mode.locationInfo:
-        e.preventDefault();
-        !this.state.toLocation && chooseLocation({
-          gardenCoords: this.getGardenCoordinates(e),
-          dispatch: this.props.dispatch
-        });
-        break;
-      case Mode.profile:
-        // Choose profile location
-        e.preventDefault();
-        chooseProfile({
-          gardenCoords: this.getGardenCoordinates(e),
-          dispatch: this.props.dispatch
-        });
-        break;
-    }
-  };
+
 
   /** Map drag actions. */
   drag = (e: React.MouseEvent<SVGElement>) => {

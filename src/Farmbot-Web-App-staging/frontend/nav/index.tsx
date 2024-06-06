@@ -74,6 +74,10 @@ export class NavBar extends React.Component<NavBarProps, Partial<NavBarState>> {
     const current = validBotLocationData(hardware.location_data).position;
     const movementState = this.props.appState.movement;
     const remaining = movementPercentRemaining(current, movementState);
+    
+     //console.log(`Current Coordinates: X=${current.x}, Y=${current.y}, Z=${current.z}`);
+
+
     return <div className={"nav-popup-button-wrapper"}>
       <Popover position={Position.BOTTOM_RIGHT}
         portalClassName={"controls-popover-portal"}
