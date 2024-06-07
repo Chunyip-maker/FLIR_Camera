@@ -1,5 +1,5 @@
 # FarmBot with FLIR AX8 Camera Integration
-
+Deployed URL : http://203.101.230.232:3000/
 ## Project Basic Information
 
 ![FarmBot](https://farm.bot/cdn/shop/files/DSC00260_2400x_87666fa7-02d0-41eb-9a12-0cc5938f39be_1200x600_crop_center.jpg?v=1600237043)
@@ -53,7 +53,28 @@ By integrating the FLIR AX8 camera into the FarmBot system, our goal is to enabl
     - [Sprint 3 Code Review PDF](./docs/Sprint%203/Sprint3_Code_Review2.pdf)
     - [Sprint 4 Plan PDF](./docs/Sprint%203/Sprint_plan.pdf) -- updated
     - [CheckList](./docs/Sprint%203/Sprint3_CheckList.md) -- updated
-  - **[Sprint 4/](./docs/Sprint%204/)** - Sprint 4 documentation (to be added)
+  - **[Sprint 4/](./docs/Sprint%204/)** - Sprint 4 documentation (Final edition)
+    - [Final Presentation Slides](./docs/Sprint%204/finalPresentation.pptx)
+    - [Project Details PDF](./docs/Sprint%204/project_detail.pdf)
+    - **[Requirement/](./docs/Sprint%204/Requirement/)** - Requirements documentation
+      - [User Story PDF](./docs/Sprint%204/Requirement/user_story.pdf)
+      - [Acceptance Criteria PDF](./docs/Sprint%204/Requirement/Acceptance_Criteria.pdf)
+    - [Technical Details PDF](./docs/Sprint%204/technical_details.pdf)
+    - [Cyber Security PDF](./docs/Sprint%204/Cyber_Security.pdf)
+    - [Ethical Considerations PDF](./docs/Sprint%204/Ethical_Considerations.pdf)
+    - **[Code Review And Plan](./docs/Sprint%204/codereview/)**
+        - [Sprint 2 Code Review PDF](./docs/Sprint%204/codereview/Sprint2/Sprint2_Code_Review.pdf)
+        - [Sprint 2 Plan PDF](./docs/Sprint%204/codereview/Sprint2/Sprint2_plan.pdf)
+        - [Sprint 3 Code Review PDF](./docs/Sprint%204/codereview/Sprint3/Sprint3_Code_Review.pdf)
+        - [Sprint 3 Plan PDF](./docs/Sprint%204/codereview/Sprint3/Sprint3_plan.pdf)
+        - [Sprint 4 Plan PDF](./docs/Sprint%204/codereview/Sprint4/Sprint4_plan.pdf)
+    - **[Handover](./docs/Sprint%204/Handover/)** -- Deploy with this order
+        - [Hardware Deploy ReadMe](./docs/Sprint%204/Handover/hardware_handover.pdf)
+        - [Reverse Proxy Deploy ReadMe](./docs/Sprint%204/Handover/ReverseProxy_README.pdf)
+        - [Webapp Deploy ReadMe](./docs/Sprint%204/Handover/Software_deployment.pdf)
+        - **[Additional Deploy Information](./docs/Sprint%204/Handover/AdditionalInformation)**
+
+    - [CheckList](./docs/Sprint%204/Sprint4_CheckList.md)
 - **[src/](./src/)** - Source code folder (to be populated starting from Sprint 2)
 - **[tests/](./tests/)** -- test cases -- updated
   - **[IntegrationTests/](./tests/IntegrationTests/)**
@@ -150,6 +171,20 @@ Updates to documentation files, such as this README, can be made directly in the
       - Plan to improve the integration methods for the FLIR AX8 camera with the FarmBot web application by simplifying communication protocols and enhancing data handling, preparing for future machine learning functionalities.
     - **Enhanced Security Measures**:
       - Develop and implement enhanced security protocols to ensure the integrity and confidentiality of data transmitted between devices and the web application, further improving the system’s scalability and maintainability to address future challenges.
+
+- **Sprint 4:**
+
+  - **Completion of All Functionalities**:
+    - Finalized the implementation of all project functionalities, covering hardware (Raspberry Pi + AX8 camera), middleware (FRP), and web application (new features using Python microservices).
+
+  - **Final Version of README Documentation**:
+    - Completed the final versions of all README files as part of the Sprint 4 handover. These documents will assist future teams in quickly understanding and deploying all hardware, software, and middleware components.
+
+  - **Release of Final Version**:
+    - Released the final version tag and packaged the project into a ZIP file, which was then sent to our users.
+
+  - **Handover and Documentation**:
+    - Ensured a comprehensive handover process, including detailed documentation and guides to support ongoing and future development.
 
 
 ## Team Members
